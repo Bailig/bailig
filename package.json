@@ -1,0 +1,28 @@
+{
+  "name": "with-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc",
+    "lint": "tslint --project ."
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@types/styled-components": "^4.1.18",
+    "next": "latest",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-spring": "^8.0.27",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.9",
+    "@types/react": "^16.8.15",
+    "@types/react-dom": "^16.0.11",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "license": "ISC"
+}
