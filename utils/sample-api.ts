@@ -1,4 +1,4 @@
-import { IHomePage, IUser } from "../interfaces";
+import { IDialogContent, IHomePage, INormalizedData, IUser } from "../interfaces";
 
 /** Dummy user data. */
 export const dataArray: IUser[] = [
@@ -39,6 +39,90 @@ const HOME_PAGE: IHomePage = {
   introductionText: "I have a passion for web development and love to create for web and mobile devices.",
   name: "Bailig Abhanar",
 };
+
 export const fetchHomePage = async () => {
   return HOME_PAGE;
+};
+
+const DIALOG_CONTENTS: INormalizedData<IDialogContent> = {
+  about: {
+    id: "about",
+    name: "About",
+    number: 3,
+    sections: {
+      section1: {
+        id: "section1",
+        imageUrl: "https://images.unsplash.com/photo-1564162586277-e6239808f8d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+        number: 1,
+        type: "image",
+      },
+      section2: {
+        id: "section2",
+        number: 2,
+        text: "N,ostrud c,ulpa p,roident pariatur ipsum commodo ad exercitation anim sunt anim veniam Lorem commodo cupidatat. Sit anim dolor laboris sit aute quis esse irure laboris dolor ad aliquip est est. In officia occaecat labore ipsum reprehenderit laboris ex laborum ipsum deserunt. Ipsum eu excepteur minim deserunt ex anim aliqua aliquip veniam Lorem occaecat sint laborum in.",
+        type: "text",
+      },
+    },
+  },
+  contact: {
+    id: "contact",
+    name: "Contact",
+    number: 4,
+    sections: {
+      section1: {
+        id: "section1",
+        imageUrl: "https://images.unsplash.com/photo-1564162586277-e6239808f8d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+        number: 1,
+        type: "image",
+      },
+      section2: {
+        id: "section2",
+        number: 2,
+        text: "N,ostrud c,ulpa p,roident pariatur ipsum commodo ad exercitation anim sunt anim veniam Lorem commodo cupidatat. Sit anim dolor laboris sit aute quis esse irure laboris dolor ad aliquip est est. In officia occaecat labore ipsum reprehenderit laboris ex laborum ipsum deserunt. Ipsum eu excepteur minim deserunt ex anim aliqua aliquip veniam Lorem occaecat sint laborum in.",
+        type: "text",
+      },
+    },
+  },
+  info: {
+    id: "info",
+    name: "Info",
+    number: 1,
+    sections: {
+      section1: {
+        id: "section1",
+        imageUrl: "https://images.unsplash.com/photo-1564162586277-e6239808f8d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+        number: 1,
+        type: "image",
+      },
+      section2: {
+        id: "section2",
+        number: 2,
+        text: "N,ostrud c,ulpa p,roident pariatur ipsum commodo ad exercitation anim sunt anim veniam Lorem commodo cupidatat. Sit anim dolor laboris sit aute quis esse irure laboris dolor ad aliquip est est. In officia occaecat labore ipsum reprehenderit laboris ex laborum ipsum deserunt. Ipsum eu excepteur minim deserunt ex anim aliqua aliquip veniam Lorem occaecat sint laborum in.",
+        type: "text",
+      },
+    },
+  },
+  work: {
+    id: "work",
+    name: "Work",
+    number: 2,
+    sections: {
+      section1: {
+        id: "section1",
+        imageUrl: "https://images.unsplash.com/photo-1564162586277-e6239808f8d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+        number: 1,
+        type: "image",
+      },
+      section2: {
+        id: "section2",
+        number: 2,
+        text: "N,ostrud c,ulpa p,roident pariatur ipsum commodo ad exercitation anim sunt anim veniam Lorem commodo cupidatat. Sit anim dolor laboris sit aute quis esse irure laboris dolor ad aliquip est est. In officia occaecat labore ipsum reprehenderit laboris ex laborum ipsum deserunt. Ipsum eu excepteur minim deserunt ex anim aliqua aliquip veniam Lorem occaecat sint laborum in.",
+        type: "text",
+      },
+    },
+  },
+};
+
+export const fetchDialogContents = async () => {
+  return DIALOG_CONTENTS;
 };

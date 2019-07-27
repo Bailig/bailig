@@ -15,3 +15,22 @@ export interface IHomePage {
   avatarImageUrl: string;
   introductionText: string;
 }
+
+export interface IDialogContent {
+  id: string;
+  name: string;
+  number: number;
+  sections?: INormalizedData<ISection>;
+}
+
+export interface ISection {
+  id: string;
+  imageUrl?: string;
+  number: number;
+  text?: string;
+  type: string;
+}
+
+export interface INormalizedData<T> {
+  [id: string]: T;
+}
