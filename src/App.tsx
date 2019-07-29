@@ -1,12 +1,11 @@
-import { NextPage } from "next";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import { Avatar, Button, ButtonGroup, Container, CopyrightNotice, Dialog, Greeting, HeadlineContainer, IntroductionText, Line, Title } from "../components";
-import { GlobalStyle } from "../components/style";
-import { IDialogContent, IHomePage, INormalizedData } from "../interfaces";
-import { fetchDialogContents, fetchHomePage } from "../utils/sample-api";
 
-export const Headline: React.FunctionComponent<{ data: IHomePage }> = (props) => {
+import React, { FC, useEffect, useState } from "react";
+import { Avatar, Button, ButtonGroup, Container, CopyrightNotice, Dialog, Greeting, HeadlineContainer, IntroductionText, Line, Title } from "./components";
+import { GlobalStyle } from "./components/style";
+import { IDialogContent, IHomePage, INormalizedData } from "./interfaces";
+import { fetchDialogContents, fetchHomePage } from "./utils/sample-api";
+
+const Headline: FC<{ data: IHomePage }> = (props) => {
   return (
     <HeadlineContainer>
       <div>
@@ -19,7 +18,7 @@ export const Headline: React.FunctionComponent<{ data: IHomePage }> = (props) =>
   );
 };
 
-const IndexPage: NextPage = () => {
+const App: FC = () => {
   const [homePage, setHomePage] = useState<IHomePage | undefined>();
   const [dialogContents, setDialogContents] = useState<INormalizedData<IDialogContent> | undefined>();
   const [openingDialogId, setOpeningDialogId] = useState<string | undefined>();
@@ -56,12 +55,6 @@ const IndexPage: NextPage = () => {
 
   return (
     <Container>
-      <Head>
-        <title>Bailig</title>
-        <meta charSet="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-      </Head>
       <GlobalStyle backgroundImageUrl={homePage.backgroundImageUrl}/>
 
       <Headline data={homePage}/>
@@ -77,4 +70,4 @@ const IndexPage: NextPage = () => {
   );
 };
 
-export default IndexPage;
+export default App;
